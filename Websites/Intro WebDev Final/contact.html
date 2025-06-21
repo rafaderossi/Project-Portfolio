@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="All the information you need to decide if being a video game designer is right for you!">
+		<meta name="keywords" content="video games, game development, coding, programming career">
+		<meta name="author" content="Rafael Phipps">
+		<title>|Becoming A Videogame Developer|</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tektur:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<img src="images/techcyborgslogo.webp" alt="the official logo of Tech Cyborg">
+				</div>
+				<div class="slogan">Pay/Benefits</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="description.html">Job Description</a></li>
+						<li><a href="skills.html">Skills and Knowledge</a></li>
+						<li><a href="tne.html">Training and Education</a></li>
+						<li><a href="snb.html">Salary and Benefits</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<main>
+			<section>
+				<h2>Job Information Summary</h2>
+				<table>
+					<tr>
+						<th>Aspect</th>
+						<th>Details</th>
+					</tr>
+					<tr>
+						<td>Job Description</td>
+						<td>Design, develop, and maintain software applications and systems.</td>
+					</tr>
+					<tr>
+						<td>Skills Required</td>
+						<td>Programming languages (Java, Python, C++), web development, SQL, problem-solving.</td>
+					</tr>
+					<tr>
+						<td>Education Required</td>
+						<td>Bachelor's degree in Computer Science or related field, or coding bootcamp.</td>
+					</tr>
+					<tr>
+						<td>Salary</td>
+						<td>Approximately $110,000/year on average in the U.S.</td>
+					</tr>
+					<tr>
+						<td>Job Outlook</td>
+						<td>High demand with a projected 22% growth rate (much faster than average).</td>
+					</tr>
+				</table>
+			</section>
+
+			<section class="contact-section" id="contact">
+				<h2>Contact Us</h2>
+				<form action="submit_form.php" method="POST">
+					<label for="name">Full Name:</label>
+					<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+					<label for="email">Email Address:</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+					<label for="phone">Phone Number:</label>
+					<input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+					<label for="country">Country:</label>
+					<select id="country" name="country" required>
+						<option value="">Select your country</option>
+						<option value="usa">United States</option>
+						<option value="uk">United Kingdom</option>
+						<option value="canada">Canada</option>
+						<option value="australia">Australia</option>
+						<option value="other">Other</option>
+					</select>
+
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" rows="4" placeholder="Enter your message here..." required></textarea>
+
+					<label for="newsletter">Subscribe to our Newsletter:</label>
+					<input type="checkbox" id="newsletter" name="newsletter">
+
+					<input type="submit" value="Submit">
+				</form>
+			</section>
+			
+			<button onclick="scrollToTop()">Scroll to Top</button>
+			<script>
+				function scrollToTop() {
+					window.scrollTo({ top: 0, behavior: "smooth"});
+					}
+			</script>
+			<hr>
+		</main>
+		
+		<footer>
+			<p>IG: Tech_Cyborgs | Business Email: techcyborgs@Gmail.com</p>
+			<p>©2025 Tech Cyborg inc. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!Doctype html>
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Budget Buddy|The New Financial You! Save money, live comfortably without financial stress!">
+		<meta name="keywords" content="budget, budgeting tool, personal finance, money management, saving money, budget app">
+		<meta name="author" content="Rafael Phipps">
+		<title>Budget Buddy|The New Financial You!</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<img src="ImagesFP/budgetbuddylogo.webp" alt="budget buddy logo">
+				</div>
+				<div class="slogan">The New Financial You</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Me</a></li>
+						<li><a href="info.html">Prototype Info</a></li>
+						<li><a href="marketing.html">Marketing</a></li>
+						<li><a href="guide.html">User Guide</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header
+	
+		<main>
+			<h1>Welcome to Budget Buddy's Prototype Phase!</h1>
+			<hr>
+			<p>As the project management team works to deliver this useful tool, we would like to give everyone a warm welcome to Budget Buddy. Coming in late 2025, we plan to be the best budgeting tool in the world that have will have people with nothing saved in their banks to living their life to their financial fullest and with comfort!</p>
+			<p>Below you will find the <em>BFF Calculator</em>that will calculate your monthly budget, calculate your <strong>mandatory savings</strong>, provide visionary insights to how much you will have saved over the course of every year, and accurately show how much <em>hugs</em> have been paid by you and to you. See more details on <em>hugs</em> in the <strong>Marketing</strong> section.</p>
+			<p><strong>This website, as mentioned above, is in its development stages but you will still be able to use the calculator tool for basic budgeting.</strong></p>
+			<div class="calculator">
+				<h2>Budget Buddy Calculator</h2>
+				<label for="income">Monthly Income:</label>
+				<input type="number" id="income" placeholder="Enter your income" required>
+
+				<label for="bills">Total Monthly Bills:</label>
+				<input type="number" id="bills" placeholder="Enter your bills" required>
+
+				<label for="savings">Monthly Savings Goal:</label>
+				<input type="number" id="savings" placeholder="Enter savings goal" required>
+
+				<button onclick="calculateBudget()">Calculate</button>
+
+				<div class="results" id="results">
+				<!-- Results will appear here -->
+				</div>
+			</div>
+
+			<script>
+				function calculateBudget() {
+					const income = parseFloat(document.getElementById('income').value);
+					const bills = parseFloat(document.getElementById('bills').value);
+					const savingsGoal = parseFloat(document.getElementById('savings').value);
+
+					if (isNaN(income) || isNaN(bills) || isNaN(savingsGoal) || income <= 0 || bills < 0 || savingsGoal < 0) {
+						alert("Please enter valid numbers for all fields.");
+						return;
+					}
+
+					// Calculate the remaining balance after bills and savings
+					const remainingBalance = income - bills - savingsGoal;
+
+					// Calculate yearly savings
+					const yearlySavings = savingsGoal * 12;
+		
+					// Show results
+					const results = document.getElementById('results');
+					results.innerHTML = `
+						<div class="result-item"><strong>Remaining Balance (after bills and savings):</strong> $${remainingBalance.toFixed(2)}</div>
+						<div class="result-item"><strong>Estimated Savings for the Year:</strong> $${yearlySavings.toFixed(2)}</div>
+					`;
+					}
+			</script>
+		</main>
+		
+		<footer>
+			<p>Interested? Get <a href="info.html">more info!</a></p>
+			<p>IG: Budget Buddy | Business Email: BudgetBuddy@Gmail.com</p>
+			<p>©2025 Budget Buddy inc. All rights reserved.</p>
+		</footer>
+	</body>
+</html>
+
